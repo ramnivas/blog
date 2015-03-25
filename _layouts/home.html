@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  {% include header.html %}
+
+  <body>
+    {% include nav.html %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col s9 m9">
+          {% for post in paginator.posts %}
+            <div class="title">
+                <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+                <div class="publish-date">{{ post.date | date: '%B %d, %Y' }}</div>
+            </div>
+            <p>{{ post.excerpt }} <a href="{{ BASE_PATH }}{{ post.url }}">Read More...</a></p>
+          {% endfor %}
+
+          <!-- Pagination links -->
+          <div class="pagination">
+            {% if paginator.previous_page %}
+              <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+            {% else %}
+              <span class="previous">Previous</span>
+            {% endif %}
+            <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+            {% if paginator.next_page %}
+              <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+            {% else %}
+              <span class="next ">Next</span>
+            {% endif %}
+          </div>
+
+        </div>
+        <div class="col s3 m3 sidebar">
+          {% include sidebar.html %}
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        {% include footer.html %}
+      </div>
+    </div>
+
+  </body>
+</html>

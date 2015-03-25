@@ -1,0 +1,23 @@
+# Site settings
+title: Aspectivity
+#email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Thoughts on aspects of programming
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://ramnivas.com" # the base hostname & protocol for your site
+twitter_username: ramnivas
+github_username:  ramnivas
+
+# Build settings
+markdown: redcarpet
+
+paginate: 10
+
+disqus_shortname: aspectivity
+
+main_site: http://ramnivas.com
+blog_site: http://blog.ramnivas.com
+
+name: Ramnivas Laddad
+
+avatar: https://secure.gravatar.com/avatar/6dbd84e94f766cd9d9db9fe3cd8804a7
