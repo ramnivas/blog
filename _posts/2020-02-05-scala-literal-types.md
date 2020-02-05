@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An example of Scala literal types 
+title: Literal types to simplify code
 date: 2020-02-05 15:00:00.000000000 -08:00
 categories: Technology
 status: publish
